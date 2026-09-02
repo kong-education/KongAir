@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KongAir Developer Portal - Product Catalog Pricing</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kong: {
+                            bg: '#0b0f19',        /* Deep Konnect Navy */
+                            card: '#111827',      /* Dark Slate Card */
+                            border: '#1f2937',    /* Subtle border */
+                            blue: '#0051c6',      /* Signature Kong Blue */
+                            cyan: '#0ea5e9',      /* Developer Portal Sky Accent */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-kong-bg text-slate-300 font-sans antialiased selection:bg-kong-blue selection:text-white pb-20">
+
+    <!-- Dev Portal Header -->
+    <header class="border-b border-kong-border bg-kong-bg/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 bg-kong-blue rounded-lg flex items-center justify-center text-white shadow-md">
+                    <i class="fa-solid fa-plane-up text-lg"></i>
+                </div>
+                <div class="flex items-baseline space-x-2">
+                    <span class="text-xl font-bold text-white tracking-tight">Kong<span class="text-kong-cyan">Air</span></span>
+                    <span class="text-xs uppercase tracking-wider font-semibold text-slate-400 border-l border-slate-700 pl-2">Dev Portal</span>
+                </div>
+            </div>
+            <div class="flex items-center space-x-6 text-sm font-medium">
+                <a href="#" class="text-slate-300 hover:text-white transition">API Catalog</a>
+                <a href="#" class="text-slate-300 hover:text-white transition">Documentation</a>
+                <a href="#" class="text-kong-cyan hover:underline transition">Product Catalog</a>
+                <a href="#" class="bg-kong-blue hover:bg-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-md transition shadow-sm">Portal Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sub-header Challenge Banner -->
+    <div class="bg-slate-900/50 border-b border-kong-border py-2 text-center text-xs text-slate-400">
+        <span>Konnect Product Catalog &bull; Feature Key: <code class="text-kong-cyan font-mono">kongair_flights_api</code> &bull; Metered Service: <code class="text-kong-cyan font-mono">flights-service</code></span>
+    </div>
+
+    <!-- Main Header -->
+    <div class="max-w-4xl mx-auto text-center mt-12 px-4">
+        <div class="inline-flex items-center space-x-2 bg-blue-950/60 border border-blue-800/50 rounded-full px-3 py-1 mb-4">
+            <span class="w-2 h-2 rounded-full bg-kong-cyan animate-pulse"></span>
+            <span class="text-xs font-medium text-blue-300">Metered API Product Catalog</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">KongAir Flights API Plans</h1>
+        <p class="text-base md:text-lg text-slate-400 max-w-2xl mx-auto">
+            Choose a plan to access metered route features. Pricing and monthly entitlement limits are managed via Konnect Metering & Billing Rate Cards.
+        </p>
+    </div>
+
+    <!-- Pricing Cards Grid -->
+    <div class="max-w-7xl mx-auto px-6 mt-14 grid md:grid-cols-3 gap-8">
+        
+        <!-- Plan 1: KongAir Free -->
+        <div class="bg-kong-card border border-kong-border rounded-xl p-8 flex flex-col hover:border-slate-600 transition">
+            <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold text-white">KongAir Free</h3>
+                <span class="text-xs font-semibold text-slate-400 bg-slate-800 px-2.5 py-1 rounded">Free Model</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-6 h-10">Entry-level entitlement for evaluation and low-volume prototyping.</p>
+            <div class="text-3xl font-extrabold text-white mb-1">$0</div>
+            <div class="text-xs text-slate-400 mb-6">No credit card required (No invoices generated)</div>
+            
+            <button class="w-full bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold py-2.5 rounded-lg border border-slate-700 transition">
+                Subscribe Free
+            </button>
+            
+            <div class="mt-8 pt-6 border-t border-kong-border">
+                <p class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-4">Rate Card Rules:</p>
+                <ul class="space-y-3.5 text-xs text-slate-300">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-kong-cyan mt-0.5 mr-3"></i>
+                        <span>Feature: <strong class="text-white">KongAir Flights API</strong></span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-kong-cyan mt-0.5 mr-3"></i>
+                        <span>Metered Limit: <strong>100 requests / month</strong></span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-kong-cyan mt-0.5 mr-3"></i>
+                        <span>Billing Cadence: <strong>1 month</strong></span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-kong-cyan mt-0.5 mr-3"></i>
+                        <span>Pricing Model: <strong>Free</strong></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Plan 2: KongAir Premium (Challenge Target Plan) -->
+        <div class="bg-kong-card border-2 border-kong-blue rounded-xl p-8 flex flex-col relative shadow-[0_0_35px_rgba(0,81,198,0.25)]">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-kong-blue text-white text-[10px] font-bold px-3 py-0.5 rounded-full uppercase tracking-wider shadow">
+                Active Plan
+            </div>
+            <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold text-white">KongAir Premium</h3>
+                <span class="text-xs font-semibold text-kong-cyan bg-blue-950/80 border border-blue-800 px-2.5 py-1 rounded">Usage Based</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-6 h-10">Production tier with metered request limits and usage-based overage rates.</p>
+            
+            <div class="flex items-baseline text-white mb-1">
+                <span class="text-3xl font-extrabold">$0.01</span>
+                <span class="text-xs text-slate-400 ml-1 font-normal">/ unit (per request)</span>
+            </div>
+            <div class="text-xs text-kong-cyan font-medium mb-6">1-Month Billing Cadence</div>
+            
+            <button class="w-full bg-kong-blue hover:bg-blue-600 text-white text-sm font-semibold py-2.5 rounded-lg shadow-md transition">
+                Subscribe to Premium
+            </button>
+            
+            <div class="mt-8 pt-6 border-t border-kong-border">
+                <p class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-4">Rate Card Configuration:</p>
+                <ul class="space-y-3.5 text-xs text-slate-300">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-kong-cyan mt-0.5 mr-3"></i>
+                        <span>Feature: <strong class="text-white">KongAir Flights API</strong></span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-kong-cyan mt-0.5 mr-3"></i>
+                        <span>Base Entitlement: <strong>5,000 requests / month</strong></span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-kong-cyan mt-0.5 mr-3"></i>
+                        <span>Price Per Unit: <strong>$0.01 per request</strong></span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-check text-kong-cyan mt-0.5 mr-3"></i>
+                        <span>Group-By Filter: <code class="bg-slate-800 px-1 py-0.5 rounded text-blue-300 font-mono">service_name = flights-service</code></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Plan 3: KongAir Enterprise Tier -->
+        <div class="bg-kong-card border border-kong-border rounded-xl p-8 flex flex-col hover:border-slate-600 transition">
+            <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold text-white">KongAir Enterprise</h3>
+                <span class="text-xs font-semibold text-slate-400 bg-slate-800 px-2.5 py-1 rounded">Tiered / Custom</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-6 h-10">High-throughput volume discounts with custom multi-feature rate cards.</p>
+            <div class="text-3xl font-extrabold text-white mb-1">Custom</div>
+            <div class="text-xs text-slate-400 mb-6">Volume pricing or dynamic models</div>
+            
+            <button class="w-full bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold py-2.5 rounded-lg border border-slate-700 transition">
+                Contact Enterprise
+            </button>
+            
+            <div class="mt-8 pt-6 border-t border-kong-border">
+                <p class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-4">Enterprise Features:</p>
+                <ul class="space-y-3.5 text-xs text-slate-300">
+                    <li class="flex items-center"><i class="fa-solid fa-check text-kong-cyan mr-3"></i>Tiered & Package Pricing Models</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-kong-cyan mr-3"></i>Multi-service meters (<code class="text-slate-400">routes-service</code>)</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-kong-cyan mr-3"></i>Unit Cost & Cost Analytics Feed</li>
+                    <li class="flex items-center"><i class="fa-solid fa-check text-kong-cyan mr-3"></i>Custom Versioning & Plan Phases</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Mapping Breakdown Table -->
+    <div class="max-w-5xl mx-auto mt-16 bg-kong-card border border-kong-border rounded-xl p-6">
+        <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center">
+            <i class="fa-solid fa-sliders text-kong-cyan mr-2"></i> Challenge Implementation Reference Matrix
+        </h4>
+        <div class="overflow-x-auto text-xs">
+            <table class="w-full text-left text-slate-300 border-collapse">
+                <thead>
+                    <tr class="border-b border-slate-800 text-slate-400 uppercase font-mono">
+                        <th class="py-2 px-3">Plan Name</th>
+                        <th class="py-2 px-3">Cadence</th>
+                        <th class="py-2 px-3">Pricing Model</th>
+                        <th class="py-2 px-3">Feature Key</th>
+                        <th class="py-2 px-3">Limit / Mo</th>
+                        <th class="py-2 px-3">Price / Unit</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800 font-mono">
+                    <tr>
+                        <td class="py-3 px-3 text-white font-bold">KongAir Free</td>
+                        <td class="py-3 px-3">1 month</td>
+                        <td class="py-3 px-3 text-slate-400">Free</td>
+                        <td class="py-3 px-3 text-kong-cyan">kongair_flights_api</td>
+                        <td class="py-3 px-3">100</td>
+                        <td class="py-3 px-3">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-3 text-white font-bold">KongAir Premium</td>
+                        <td class="py-3 px-3">1 month</td>
+                        <td class="py-3 px-3 text-kong-cyan">Usage based</td>
+                        <td class="py-3 px-3 text-kong-cyan">kongair_flights_api</td>
+                        <td class="py-3 px-3">5,000</td>
+                        <td class="py-3 px-3">$0.01</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
